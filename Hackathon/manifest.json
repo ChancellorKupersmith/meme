@@ -1,0 +1,36 @@
+{
+    "name": "Ye knows",
+    "description": "Kanye is Socrates",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": ["storage", "activeTab", "scripting", "tabs"],
+    "host_permissions": ["https://*/*", "http://*/*"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/images/kanyeBtn.png",
+            "32": "/images/kanyeBtn.png",
+            "48": "/images/kanyeBtn.png",
+            "128": "/images/kanyeBtn.png"
+          }
+    },
+    "icons": {
+        "16": "/images/kanyeBtn.png",
+        "32": "/images/kanyeBtn.png",
+        "48": "/images/kanyeBtn.png",
+        "128": "/images/kanyeBtn.png"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [ "/images/*" ],
+        "matches": [ "https://en.wikipedia.org/*", "https://www.frontendmentor.io/*", "https://www.reddit.com/*", "https://www.codesmith.io/*"]
+      },
+      {
+        "resources": [ "/audio/*" ],
+        "matches": [ "https://en.wikipedia.org/*", "https://www.frontendmentor.io/*", "https://www.reddit.com/*", "https://www.codesmith.io/*"]
+      }
+    ]
+}
